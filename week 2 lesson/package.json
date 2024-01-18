@@ -1,0 +1,22 @@
+{
+  "name": "testapp-b",
+  "version": "1.0.0",
+  "description": "my first express.js app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "keywords": [
+    "ederes",
+    "gure"
+  ],
+  "author": "ederes gure",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
