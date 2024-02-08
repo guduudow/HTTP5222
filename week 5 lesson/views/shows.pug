@@ -1,0 +1,15 @@
+extends layout 
+
+block main-content 
+	h1.page-title Hello! 
+	p Here are the most popular tv shows: 
+	table(style='width:100%', border='1')
+		tr 
+			th Title 
+			th Year 
+		tr 
+			each s in shows 
+				tr 
+					td
+						a(href=`http://www.imdb.com/title/${s.ids.imdb}`) #{s.title}
+					td #{s.year}
