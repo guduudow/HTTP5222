@@ -1,11 +1,15 @@
 const express = require('express'); //require express in the app
 const path = require('path');
-const { MongoClient, ObjectId } = require("mongodb") //import MongoClient from mongoDB
 const { link } = require("fs");
 
-//db values
-const dbUrl = "mongodb://127.0.0.1:27017/offerings";
-const client = new MongoClient(dbUrl);
+//env include
+const dotenv = require('dotenv');
+dotenv.config();
+
+//import page routes
+const adminMenuRouter = require("./modules/offerings/router");
+const pageRouter = require('./modules/pages/router');
+
 
 const app = express(); //create an express app
 const port = process.env.PORT || "8284"; //set up app to run on port #8284
@@ -17,15 +21,10 @@ app.set('view engine', 'pug'); //set up app to use pug as template engine
 //set up path for static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-//set up some pages routes
-app.get('/', (request, response) => {
-    //response.status(200).send("Test Page"); //just to test
-    response.render("index", { title: "Home" });
-});
+//USE PAGE ROUTES FROM MODULE
+app.use("/", pageRouter);
+app.use("/admin/menu", adminMenuRouter);
 
 app.listen(port, () => {
     console.log(`listening on http://localhost:${port}`);
 })
-
-//next step ask teacher best way to add bootstrap either thru CDN or NPM
-//my three pages - homepage, clothes selection and form to purchase

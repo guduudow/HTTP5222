@@ -1,0 +1,14 @@
+extends ../common/layout 
+
+block layout-content 
+	h1.page-title Admin menu 
+	table(class="table table-secondary table-bordered table-stripped-columns my-5 border border-black") 
+		thead 
+			tr 
+				th(scope="col") Product 
+				th(scope="col") Gender 
+		tbody 
+			each link in menu 
+				tr 
+					td #{link.size} #{link.color} #{link.name}
+					td #{link.section}

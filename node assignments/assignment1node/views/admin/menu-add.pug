@@ -1,0 +1,28 @@
+extends ../common/layout 
+
+block layout-content 
+	.content 
+		h1(class="page-title mx-5") Add a product 
+		form(method="post", action="/admin/menu/add/submit")
+			div
+				div(class="form-group row my-3 mx-5") 
+					label(for="nom" class="form-label") Name: 
+					input(type="text" id="nom" name="name" class="form-control")
+				div(class="form-group row my-3 mx-5") 
+					label(for="color" class="form-label") Color: 
+					input(type="text" id="clr" name="color" class="form-control")
+				div(class="form-group row my-3 mx-5") 
+					label(for="size" class="form-label") Size: 
+					select(id="sze" name="size" class="form-control")
+						option(value="") --Choose a size--
+						option(value="small") small 
+						option(value="medium") medium 
+						option(value="large") large 
+				div(class="form-group row my-3 mx-5") 
+					label(for="sex" class="form-label") Section: 
+					select(id="sex" name="section" class="form-control") 
+						option(value="") --Choose a section--
+						option(value="men") men 
+						option(value="women") women
+				div(class="d-flex justify-content-center")
+					button(type="submit" class="btn btn-secondary mt-4") Add product 
