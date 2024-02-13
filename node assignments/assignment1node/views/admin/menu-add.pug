@@ -24,5 +24,11 @@ block layout-content
 						option(value="") --Choose a section--
 						option(value="men") men 
 						option(value="women") women
+				div(class="form-group row my-3 mx-5")
+					label(for='price' class="form-label") Price: 
+					input(type="text" id="cost" name="price" class="form-control")
+				div(class="form-group row my-3 mx-5")
+					label(for="image" class="form-label") Image Link: 
+					input(type="text" id="img" name="image" class="form-control" placeholder="use direct url of image")
 				div(class="d-flex justify-content-center")
 					button(type="submit" class="btn btn-secondary mt-4") Add product 

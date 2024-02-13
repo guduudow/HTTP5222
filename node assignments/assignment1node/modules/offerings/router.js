@@ -21,8 +21,15 @@ router.get("/add", async (request, response) => {
 
 router.get("/mens", async (request, response) => {
     let offers = await model.showMenOffers();
+    debugger;
     console.log(offers);
     response.render("mens", { title: "Mens", view: offers });
+});
+
+router.get("/womens", async (request, response) => {
+    let offers = await model.showWomenOffers();
+    console.log(offers);
+    response.render("mens", { title: "Womens", view: offers });
 });
 
 //FORM PROCESSING PATHS
@@ -31,7 +38,9 @@ router.post("/add/submit", async (request, response) => {
     let clr = request.body.color;
     let size = request.body.size;
     let sex = request.body.section;
-    let newOffer = { "name": nom, "color": clr, "size": size, "section": sex };
+    let cost = request.body.price;
+    let img = request.body.image;
+    let newOffer = { "name": nom, "color": clr, "size": size, "section": sex, "price": cost, "image": img };
     model.addOffer(newOffer);
 
     response.redirect("/admin/menu");

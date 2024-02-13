@@ -2,17 +2,12 @@ extends common/layout
 
 block layout-content 
 	h1(class="display-2") Men's 
-	table(class="table table-secondary table-bordered table-stripped-columns my-5 border border-black") 
-		thead 
-			tr 
-				th(scope="col") Product 
-				th(scope="col") Gender 
-		tbody 
-			if view.length > 0
-				each offer in view 
-					tr 
-						td #{offer.size} #{offer.color} #{offer.name}
-						td #{offer.section}
-			else 
-				tr 
-					td(colspan="2") No offers available
+	div(class="container")
+		div(class="row")
+			each offer in view 
+				div(class="col-md-4")
+					div(class="card" style="width=2rem;")
+						img(src=offer.image style="height: 400px; width: auto;")
+						div(class="card-body")
+							h5(class="card-title") #{offer.size} #{offer.color} #{offer.name} 
+							p(class="card-text") Price: #{offer.price} 
