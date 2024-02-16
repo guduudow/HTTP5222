@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+.header-font {
+  font-family: "Bebas Neue", sans-serif;
+  color: #7f27ff;
+}
+
+.subheading {
+  font-family: "Staatliches", sans-serif;
+  color: #7f27ff;
+}
+
+.tagline {
+  font-family: "Nunito", sans-serif;
+  color: #7f27ff;
+}
+
+.main-sec {
+  /* background-color: #fdbf60; */
+  background-image: url(/images/centerpic.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+header {
+  background-color: white;
+}
+
+border-bottom {
+  background-color: white;
+}
+
+footer {
+  background-color: white;
+}
+
+main {
+  background-color: white;
+}
+
+.malecard {
+  background-image: url(/images/cardmen.avif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.femalecard {
+  background-image: url(/images/cardwomen.avif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.carusel {
+  height: 250px;
+}
+
+.caro1 {
+  background-color: #74e291;
+  height: 250px;
+}
+
+.caro1-subtext {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.read-more-btn {
+  color: #74e291;
+}
+
+.caro2 {
+  background-color: black;
+  height: 250px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.read-more2-btn {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.caro3 {
+  background-image: url(/images/testthis.png);
+  background-size: 100%;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  height: 250px;
+}
+
+.singlecard {
+  border: 2px solid #9f70fd;
+}
+
+.cardsub {
+  background-color: #7f27ff;
+}
+
+.header-card {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+}
+
+.subtext-card {
+  font-family: "Bebas Neue", sans-serif;
+  color: #fdbf60;
+}
+
+.header-font-caro {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+}
+
+/* #footer {
+  background-color: #7f27ff;
+}
+
+.footer-logo {
+  color: white;
+} */
+
+/* #fdbf60 */
+/* #ff8911 */

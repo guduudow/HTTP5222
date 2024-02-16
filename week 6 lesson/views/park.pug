@@ -1,0 +1,14 @@
+extends layout
+
+block main-content
+  - let parkName = parkData.querySelector("LocationName").textContent;
+  - let addr = parkData.querySelector("Address").textContent;
+  - let pcode = parkData.querySelector("PostalCode").textContent;
+  - let facilities = parkData.querySelectorAll("FacilityDisplayName");
+  h1 #{parkName}
+  p #{addr}
+  p #{pcode}
+  p Facilities available: 
+  ul 
+    each f in facilities 
+      li #{f.textContent}

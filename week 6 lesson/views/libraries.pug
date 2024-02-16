@@ -1,0 +1,14 @@
+extends layout 
+
+block main-content
+  h1 Libraries 
+  each library in libraryData
+    - let libraryName = library.querySelector("name").textContent;
+    - let desc = library.querySelector("description").textContent;
+    - let addr = library.querySelector("address").textContent;
+    - let phone = library.querySelector("phoneNumber").textContent;
+    div
+      h1 #{libraryName}
+      p!= desc
+      p #{addr}
+      p #{phone}

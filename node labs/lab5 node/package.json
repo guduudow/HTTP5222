@@ -1,0 +1,11 @@
+{
+  "name": "lab5-node",
+  "version": "1.0.0",
+  "description": "lab 5 for http5222-0nb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ederes gure",
+  "license": "ISC"
+}

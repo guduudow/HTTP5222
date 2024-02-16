@@ -1,13 +1,13 @@
 extends common/layout 
 
 block layout-content 
-	h1(class="display-2") Men's 
+	h1(class="display-2 subheading mx-3") Men's 
 	div(class="container")
 		div(class="row")
 			each offer in view 
 				div(class="col-md-4")
-					div(class="card" style="width=2rem;")
+					div(class="card singlecard mb-2" style="width=2rem;")
 						img(src=offer.image style="height: 400px; width: auto;")
-						div(class="card-body")
-							h5(class="card-title") #{offer.size} #{offer.color} #{offer.name} 
-							p(class="card-text") Price: #{offer.price} 
+						div(class="card-body cardsub")
+							h5(class="card-title header-card") #{offer.size} #{offer.color} #{offer.name} 
+							p(class="card-text subtext-card") Price: #{offer.price} 
