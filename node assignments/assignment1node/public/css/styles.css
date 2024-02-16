@@ -93,6 +93,10 @@ a {
   border: 2px solid white;
 }
 
+.seemorebtn {
+  color: white;
+}
+
 .caro3 {
   background-image: url(/images/testthis.png);
   background-size: 100%;
