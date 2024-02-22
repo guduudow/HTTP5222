@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "books.dtd">
+<books>
+  <book id="1">
+    <title>We</title>
+    <author>
+      <name>
+        <first>Yevgeny</first>
+        <last>Zamyatin</last>
+      </name>
+    </author>
+    <year>1922</year>
+    <isbn>9788804734659</isbn>
+    <language>Russian</language>
+  </book>
+  <book id="2">
+    <title>The Brothers Karamazov</title>
+    <author>
+      <name>
+        <first>Fyodor</first>
+        <last>Dostoevsky</last>
+      </name>
+    </author>
+    <year>1880</year>
+    <isbn>9780394604152</isbn>
+    <language>Russian</language>
+  </book>
+  <book id="3">
+    <title>War and Peace</title>
+    <author>
+      <name>
+        <first>Leo</first>
+        <last>Tolstoy</last>
+      </name>
+    </author>
+    <year>1867</year>
+    <isbn>9780191612541</isbn>
+    <language>Russian</language>
+  </book>
+  <book id="4">
+    <title>The Master and Margarita</title>
+    <author>
+      <name>
+        <first>Mikhail</first>
+        <last>Bulgakov</last>
+      </name>
+    </author>
+    <year>1967</year>
+    <isbn>9780679760801</isbn>
+    <language>Russian</language>
+  </book>
+  <book id="5">
+    <title>Crime and Punishment</title>
+    <author>
+      <name>
+        <first>Fyodor</first>
+        <last>Dostoevsky</last>
+      </name>
+    </author>
+    <year>1866</year>
+    <isbn>9780192833839</isbn>
+    <language>Russian</language>
+  </book>
+</books>

@@ -1,0 +1,13 @@
+<!ELEMENT books (book*)>
+<!ELEMENT book (title, author+, year, isbn, language)>
+<!ATTLIST book
+  id CDATA #REQUIRED
+>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (name)>
+<!ELEMENT name (first, last)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT language (#PCDATA)>

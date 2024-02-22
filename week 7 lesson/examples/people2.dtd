@@ -1,0 +1,17 @@
+<!-- when defining the number of instances you can use ? (0 or 1), + (1 or more) or * (0 or more) -->
+<!ELEMENT people (person*)>
+<!ELEMENT person (name, bio?)>
+<!-- #IMPLIED means optional -->
+<!ATTLIST person
+  id  CDATA  #REQUIRED
+  salutation  (Mr | Mrs | Miss | Ms | Master | Lord | Lady) #IMPLIED
+  job CDATA  #IMPLIED
+  single CDATA #FIXED "yes"
+>
+<!ELEMENT name (first, middle?, last)>
+<!ELEMENT first (#PCDATA)> <!-- #PCDATA maeans Parseable Character DATA-->
+<!ELEMENT middle (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+<!-- -->
+<!ELEMENT bio (#PCDATA | em)*>
+<!ELEMENT em (#PCDATA)>

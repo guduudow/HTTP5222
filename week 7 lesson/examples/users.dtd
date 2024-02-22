@@ -1,0 +1,15 @@
+<!ELEMENT users (user*)>
+<!ELEMENT user (name, email, address+)>
+<!ATTLIST user 
+  id CDATA #REQUIRED
+>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT address (street, city, province, postalcode)>
+<!ATTLIST address
+  primary (y | n) "y"
+>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT province (#PCDATA)>
+<!ELEMENT postalcode (#PCDATA)>

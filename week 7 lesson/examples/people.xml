@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Example of an inline DTD here -->
+<!DOCTYPE people[
+<!-- when defining the number of iinstances you can use ? (0 or 1), + (1 or more) or * (0 or more) -->
+  <!ELEMENT people (person*)>
+  <!ELEMENT person (name, bio?)>
+  <!-- #IMPLIED means optional -->
+  <!ATTLIST person
+    id  CDATA  #REQUIRED
+    salutation  (Mr | Mrs | Miss | Ms | Master | Lord | Lady) #IMPLIED
+    job CDATA  #IMPLIED
+  >
+  <!ELEMENT name (first, middle?, last)>
+  <!ELEMENT first (#PCDATA)> <!-- #PCDATA maeans Parseable Character DATA-->
+  <!ELEMENT middle (#PCDATA)>
+  <!ELEMENT last (#PCDATA)>
+  <!ELEMENT bio (#PCDATA)>
+]>
+<people>
+  <person id="1" salutation="Mr" job="accountant">
+    <name>
+      <first>John</first>
+      <middle>James</middle>
+      <last>Doe</last>
+    </name>
+    <bio>This is just some tet.</bio>
+  </person>
+  <person id="2" salutation="Mr" job="wizard">
+    <name>
+      <first>Harry</first>
+      <last>Potter</last>
+    </name>
+  </person>
+  <person id="3" salutation="Miss" job="engineer">
+    <name>
+      <first>Jane</first>
+      <last>Smith</last>
+    </name>
+  </person>
+</people>
