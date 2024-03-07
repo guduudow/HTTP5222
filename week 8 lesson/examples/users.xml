@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<users>
+  <user id="1">
+    <name>john123</name>
+    <email>john.doe@example.com</email>
+    <address primary="y">
+      <street>123 Fake Street</street>
+      <city>Toronto</city>
+      <province>ON</province>
+      <postalcode>A1A 1A1</postalcode>
+    </address>
+    <address primary="n">
+      <street>460 John Street</street>
+      <city>Toronto</city>
+      <province>ON</province>
+      <postalcode>A1A 1A1</postalcode>
+    </address>
+  </user>
+  <user id="2">
+    <name>janesmith</name>
+    <email>jane.smith@example.com</email>
+    <address primary="y">
+      <street>345 Fake Street</street>
+      <city>Toronto</city>
+      <province>ON</province>
+      <postalcode>A1A 1A1</postalcode>
+    </address>
+  </user>
+</users>

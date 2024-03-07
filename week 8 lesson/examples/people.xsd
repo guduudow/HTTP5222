@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- All our schema defintions go in here -->
+  <xs:element name="people">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- minOccurs = "0" and maxOccurs = "unbounded" is equivalent to * DTDs -->
+        <xs:element name="person" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="first" type="xs:string"/>
+                    <!-- if it's possible for middle to NOT occur within <name>, use minOccurs="0" to say it can occur 0 times. -->
+                    <xs:element name="middle" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="initials" type="xs:string"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="last" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="bio" minOccurs="0">
+                <xs:complexType mixed="true">
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="em" type="xs:string"/>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <!-- attribute defintions go ater xs:sequence (or xs:any, xs:all, xs:choice-->
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="salutation" type="honorific" use="required"/>
+            <xs:attribute name="job" type="xs:string"/>
+            <xs:attribute name="single" type="yesno"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- CUSTOM DATA TYPES -->
+  <xs:simpleType name="honorific">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mr"/>
+      <xs:enumeration value="Miss"/>
+      <xs:enumeration value="Mrs"/>
+      <xs:enumeration value="Sir"/>
+      <xs:enumeration value="Madam"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yesno">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes"/>
+      <xs:enumeration value="no"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yn">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="y"/>
+      <xs:enumeration value="n"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
