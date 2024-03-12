@@ -1,0 +1,12 @@
+extends common/layout
+
+block layout-content 
+    h1(class="display-2 text-center") Look up and learn
+    p(class="text-center") Search up any english word and find instant translations across multiple languages
+    div(class="container")
+      form
+        div(class="mb-3 my-0 d-flex")
+          input(type="text" class="form-control mx-5" id="word")
+          span(class="input-group-btn")
+            button(type="submit" class="btn btn-dark") Search
+        div(id="searchHelp" class="form-text mx-5") Search across multiple languages
