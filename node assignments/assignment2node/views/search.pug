@@ -1,0 +1,10 @@
+extends common/layout 
+
+block layout-content 
+  if data
+    div(class="mt-4")
+      h2(class="text-center") Word Data
+      p(class="text-center") Origin: #{data.origin}
+      ul(class="list-group mt-3")
+        each meaning in data.meanings
+          li(class="list-group-item") Definition: #{meaning.definitions[0].definition}
