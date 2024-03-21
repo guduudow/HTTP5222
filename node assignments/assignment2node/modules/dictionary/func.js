@@ -1,13 +1,5 @@
 const axios = require('axios');
 
-function handleSearch(event) {
-  event.preventDefault(); // Prevent form submission
-  const searchTerm = document.getElementById('word').value.trim(); // Get the search term from the input field
-  console.log(searchTerm);
-  // Call getWord function with the search term
-  getWord(searchTerm);
-}
-
 
 async function getWord(word) {
   const apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
@@ -18,12 +10,11 @@ async function getWord(word) {
   let meanings = wordData.meanings;
   //let definitions = meanings[0].definitions;
   //console.log(name);
-  console.log(origin);
-  console.log(meanings);
+  console.log(wordData);
+  //console.log(meanings);
   //console.log(definitions);
 }
 
 module.exports = {
-  handleSearch,
   getWord
 };
